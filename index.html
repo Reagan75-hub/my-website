@@ -1,62 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile</title>
-  <link rel="stylesheet" href="style.CSS">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#142338">
+
+    <title>Omondi Reagan | Professional Dashboard</title>
+    <meta name="description" content="Professional dashboard and portfolio of Omondi Reagan, Plant and Service Engineering student, aspiring developer and entrepreneur.">
+    <meta name="author" content="Omondi Reagan">
+
+    <!-- Social sharing preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Omondi Reagan | Professional Dashboard">
+    <meta property="og:description" content="Engineering, technology and entrepreneurship portfolio of Omondi Reagan.">
+    <meta property="og:image" content="reagan.jpeg">
+
+    <!-- Browser tab icon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142338'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3ER%3C/text%3E%3C/svg%3E">
+
+    <!-- File name is case-sensitive on most web hosts: keep it lowercase -->
+    <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
-  <header>
-    <h1>Omondi Reagan</h1>
-    <p>Aspiring Web Developer | Plant and Service Engineer</p>
-  </header>
 
-  <main>
-    <section class="about">
-      <h2>About Me</h2>
-      <img src="reagan.jpeg" alt="Plant and Service Engineer">
-      <p>Hello! I'm learning web development and i'm an Engineer. I love engineering, technology, and building useful things.</p>
-    </section>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
- <section class="skills">
-   <h2>My Skills</h2>
-   <ul>
-     <li>HTML $ CSS</li>
-     <li>JavaScript (Basics)</li>
-     <li>Python for Automatiion</li>
-     <li>Microsoft Excel for Engineer's</li>
-     <li>Perform Plant Maintenance</li>
-     <li>Installation of Mechanical Pumps and Compressors</li>
-     <li>Installation of Hydraulic and Pneumatic Systems</li>
-     <li>Operate and Maintain Plant Machinery</li>
-     <li>Installation of Refrigeration and Air-Conditioning Systems(RAC)</li>
-   </ul>
- </section>
+    <div class="dashboard">
 
- <section class="projects">
-   <h2>My Projects</h2>
-   <ul>
-     <li>Personal Portifolio Website (HTML $ CSS)</li>
-     <li>Maintenance Schedule Tool in Excel</li>
-     <li>Simple Calculator in Python</li>
-     <li>Survey Drawing Project (AutoCAD)</li>
-   </ul>
- </section>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
 
- <section class="contact">
-      <h2><u>Contact Me</u></h2>
-      <ul>
-        <li>Email: <a href="mailto:omoshreagan750@gmail.com">omoshreagan750@gmail.com</a></li>
-        <li>Phone: <a href="tel:+254715097757">+254 715097757</a></li>
-        <li>WhatsApp: <a href="https://wa.me/254715097757" target="_blank">Chat with me</a></li>
-        <li>Location: Kenya</li>
-      </ul>
-    </section>
-  </main>
+            <div class="brand">
+                <h2>REAGAN<span>.</span></h2>
+                <p>PERSONAL DASHBOARD</p>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Omosh Reagan. All rights reserved.</p>
-  </footer>
+            <div class="profile-mini">
+                <img src="reagan.jpeg" alt="" decoding="async">
+                <div>
+                    <h3>Omondi Reagan</h3>
+                    <p>Professional Profile</p>
+                </div>
+            </div>
+
+            <p class="nav-heading">MAIN MENU</p>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#overview" class="active" aria-current="true"><span aria-hidden="true">⌂</span> Overview</a>
+                <a href="#profile"><span aria-hidden="true">◉</span> My Profile</a>
+                <a href="#skills"><span aria-hidden="true">▤</span> Technical Skills</a>
+                <a href="#business"><span aria-hidden="true">▣</span> Business Experience</a>
+                <a href="#projects"><span aria-hidden="true">▧</span> My Projects</a>
+                <a href="#experience"><span aria-hidden="true">⚙</span> Work Experience</a>
+                <a href="#education"><span aria-hidden="true">▥</span> Education</a>
+                <a href="#qualifications"><span aria-hidden="true">✓</span> Qualifications</a>
+                <a href="#contact"><span aria-hidden="true">✉</span> Contact</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Explore my original portfolio</p>
+                <a href="portfolio.html" class="portfolio-link">
+                    Original Portfolio <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content" id="main">
+
+            <!-- TOP HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">PERSONAL SPACE / OVERVIEW</p>
+                    <h1>My Dashboard</h1>
+                    <p class="top-description">Welcome to my professional and personal space.</p>
+                </div>
+
+                <div class="topbar-actions">
+                    <a href="portfolio.html" class="top-portfolio-button">Original Portfolio</a>
+                    <a href="#contact" class="contact-button">Contact Me</a>
+                </div>
+
+            </header>
+
+
+            <!-- OVERVIEW -->
+            <section id="overview" class="section" aria-labelledby="overview-title">
+
+                <div class="welcome-card">
+
+                    <div class="welcome-content">
+
+                        <p class="eyebrow">WELCOME TO MY DASHBOARD</p>
+
+                        <h2 id="overview-title">Hello, I'm <span>Omondi Reagan.</span></h2>
+
+                        <p>
+                            Plant and Service Engineering student, aspiring web developer
+                            and entrepreneur passionate about engineering, technology
+                            and creating useful solutions.
+                        </p>
+
+                        <div class="welcome-actions">
+                            <a href="#profile" class="primary-button">Explore My Profile</a>
+                            <a href="#projects" class="secondary-button">View My Projects</a>
+                            <a href="portfolio.html" class="portfolio-button">Original Portfolio →</a>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div>
+                                <strong>Level 5</strong>
+                                <span>Plant &amp; Service Engineering</span>
+                            </div>
+                            <div>
+                                <strong>5</strong>
+                                <span>Projects &amp; ideas</span>
+                            </div>
+                            <div>
+                                <strong>2</strong>
+                                <span>Qualifications</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="welcome-image">
+                        <img src="reagan.jpeg" alt="Portrait of Omondi Reagan" decoding="async">
+                    </div>
+
+                </div>
+
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">AT A GLANCE</p>
+                        <h2>Dashboard Overview</h2>
+                    </div>
+                </div>
+
+
+                <div class="overview-grid">
+
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">⚙</div>
+                        <h3>Engineering</h3>
+                        <p>Plant and Service Engineering Level 5</p>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">💻</div>
+                        <h3>Technology</h3>
+                        <p>Web development and programming</p>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">▣</div>
+                        <h3>Entrepreneurship</h3>
+                        <p>REAGOM ENTERPRISES</p>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">🚘</div>
+                        <h3>Driving Licence</h3>
+                        <p>Class B2 Smart Driving Licence</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE -->
+            <section id="profile" class="section" aria-labelledby="profile-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">INTRODUCTION</p>
+                        <h2 id="profile-title">My Profile</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <h3>About Me</h3>
+
+                    <p>
+                        My name is Omondi Reagan. I have a background in Plant and
+                        Service Engineering and a strong interest in technology,
+                        mechanical systems, entrepreneurship and software development.
+                    </p>
+
+                    <p>
+                        I enjoy acquiring practical skills, exploring new technologies
+                        and developing solutions to everyday challenges.
+                    </p>
+
+                    <div class="information-grid">
+                        <div>
+                            <span>Full Name</span>
+                            <strong>Omondi Reagan</strong>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <strong>Kenya</strong>
+                        </div>
+                        <div>
+                            <span>Professional Field</span>
+                            <strong>Engineering and Technology</strong>
+                        </div>
+                        <div>
+                            <span>Business</span>
+                            <strong>REAGOM ENTERPRISES</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TECHNICAL SKILLS -->
+            <section id="skills" class="section" aria-labelledby="skills-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">WHAT I CAN DO</p>
+                        <h2 id="skills-title">Technical Skills</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <h3>Engineering Skills</h3>
+                    <ul class="skills-list">
+                        <li>Plant Maintenance</li>
+                        <li>Mechanical Pumps and Compressors</li>
+                        <li>Hydraulic and Pneumatic Systems</li>
+                        <li>Plant Machinery Operation and Maintenance</li>
+                        <li>Refrigeration and Air Conditioning</li>
+                        <li>Mechanical Workshop Practices</li>
+                    </ul>
+
+                    <h3>Computer and Digital Skills</h3>
+                    <ul class="skills-list">
+                        <li>HTML and CSS</li>
+                        <li>JavaScript Fundamentals</li>
+                        <li>Python Fundamentals</li>
+                        <li>Microsoft Excel</li>
+                        <li>AutoCAD</li>
+                        <li>GitHub Fundamentals</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- BUSINESS EXPERIENCE -->
+            <section id="business" class="section" aria-labelledby="business-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">ENTREPRENEURSHIP</p>
+                        <h2 id="business-title">Business Skills and Experience</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <h3>REAGOM ENTERPRISES</h3>
+
+                    <p>
+                        Developing business management and digital entrepreneurship
+                        experience through my business activities and projects.
+                    </p>
+
+                    <div class="business-grid">
+
+                        <div class="business-item">
+                            <h4>Business Registration</h4>
+                            <p>Practical experience with business name registration through BRS and eCitizen.</p>
+                        </div>
+
+                        <div class="business-item">
+                            <h4>Business Payments</h4>
+                            <p>Experience with the Safaricom Business Till application process.</p>
+                        </div>
+
+                        <div class="business-item">
+                            <h4>Daraja API</h4>
+                            <p>Experience with production setup and M-Pesa integration.</p>
+                        </div>
+
+                        <div class="business-item">
+                            <h4>Digital Business</h4>
+                            <p>Developing ideas involving digital payments, networking and automation.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECTS -->
+            <section id="projects" class="section" aria-labelledby="projects-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">MY WORK</p>
+                        <h2 id="projects-title">Projects and Innovations</h2>
+                    </div>
+                </div>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <p class="project-category">FINANCIAL TECHNOLOGY</p>
+                        <h3>REAGOM PAY</h3>
+                        <p>An M-Pesa payment integration project exploring Safaricom Daraja API and STK Push functionality.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Daraja API</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-category">NETWORKING</p>
+                        <h3>REAGOM_WIFI</h3>
+                        <p>A planned Wi-Fi hotspot management system connecting customer packages with M-Pesa payments.</p>
+                        <div class="project-tags">
+                            <span>Networking</span>
+                            <span>Python</span>
+                            <span>M-Pesa</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-category">ENGINEERING</p>
+                        <h3>Maintenance Schedule Tool</h3>
+                        <p>An Excel-based project for organising and tracking engineering maintenance schedules.</p>
+                        <div class="project-tags">
+                            <span>Excel</span>
+                            <span>Maintenance</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-category">PROGRAMMING</p>
+                        <h3>Python Calculator</h3>
+                        <p>A beginner programming project demonstrating basic mathematical operations using Python.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Programming</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-category">TECHNICAL DRAWING</p>
+                        <h3>AutoCAD Survey Drawing</h3>
+                        <p>A technical drawing project using AutoCAD tools and drawing principles.</p>
+                        <div class="project-tags">
+                            <span>AutoCAD</span>
+                            <span>Drawing</span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- WORK EXPERIENCE -->
+            <section id="experience" class="section" aria-labelledby="experience-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">CAREER HISTORY</p>
+                        <h2 id="experience-title">Work Experience</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <div class="experience-item">
+
+                        <p class="project-category">INDUSTRIAL EXPERIENCE</p>
+
+                        <h3>Sony Sugar Company</h3>
+
+                        <p class="job-title">Manufacturing Department – Mechanical</p>
+
+                        <p>
+                            Completed an industrial attachment followed by a further
+                            three-month maintenance work period as a Fitter.
+                        </p>
+
+                        <h4>Role and Exposure</h4>
+
+                        <ul class="skills-list">
+                            <li>Industrial maintenance activities</li>
+                            <li>Mechanical equipment maintenance</li>
+                            <li>Practical workshop activities</li>
+                            <li>Exposure to manufacturing operations</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDUCATION -->
+            <section id="education" class="section" aria-labelledby="education-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">ACADEMIC BACKGROUND</p>
+                        <h2 id="education-title">Education</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <div class="education-item">
+                        <h3>Eldoret National Polytechnic</h3>
+                        <p>Plant and Service Engineering – Level 5</p>
+                        <span class="education-status">Final assignments remaining</span>
+                    </div>
+
+                    <div class="education-item">
+                        <h3>Shiners Group of Schools</h3>
+                        <p>Kenya Certificate of Secondary Education (KCSE)</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- QUALIFICATIONS -->
+            <section id="qualifications" class="section" aria-labelledby="qualifications-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">PROFESSIONAL CREDENTIALS</p>
+                        <h2 id="qualifications-title">Qualifications and Licences</h2>
+                    </div>
+                </div>
+
+                <div class="qualification-grid">
+
+                    <div class="qualification-card">
+                        <div class="card-icon" aria-hidden="true">🚘</div>
+                        <h3>Smart Driving Licence</h3>
+                        <p>Class B2</p>
+                        <span class="qualification-status">Obtained</span>
+                    </div>
+
+                    <div class="qualification-card">
+                        <div class="card-icon" aria-hidden="true">📜</div>
+                        <h3>WIPO Academy</h3>
+                        <p>Introduction to the Patent Cooperation Treaty</p>
+                        <span class="qualification-status">Certificate obtained</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTACT -->
+            <section id="contact" class="section" aria-labelledby="contact-title">
+
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">GET IN TOUCH</p>
+                        <h2 id="contact-title">Contact Me</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        Feel free to contact me for professional, engineering,
+                        technology or business-related opportunities.
+                    </p>
+
+                    <div class="contact-list">
+
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:omoshreagan750@gmail.com">omoshreagan750@gmail.com</a>
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong>
+                            <a href="tel:+254715097757">+254 715 097 757</a>
+                        </p>
+
+                        <p>
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me/254715097757" target="_blank" rel="noopener noreferrer">Chat with me</a>
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong> Kenya
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="main-footer">
+
+                <div>
+                    <h3>OMONDI REAGAN</h3>
+                    <p>Engineering | Technology | Entrepreneurship</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="portfolio.html">Original Portfolio</a>
+                    <a href="#overview">Back to Top ↑</a>
+                </div>
+
+                <p class="copyright">&copy; 2026 Omondi Reagan. All Rights Reserved.</p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script>
+        (function () {
+            'use strict';
+
+            /* 1. Highlight the sidebar link of the section currently in view */
+            var links = Array.prototype.slice.call(
+                document.querySelectorAll('.navigation a[href^="#"]')
+            );
+
+            function setActive(id) {
+                links.forEach(function (link) {
+                    var match = link.getAttribute('href') === '#' + id;
+                    link.classList.toggle('active', match);
+                    if (match) {
+                        link.setAttribute('aria-current', 'true');
+                        /* keep the active link visible in the scrolling mobile menu */
+                        if (link.scrollIntoView && link.parentElement.scrollWidth > link.parentElement.clientWidth) {
+                            var nav = link.parentElement;
+                            nav.scrollLeft = link.offsetLeft - (nav.clientWidth - link.clientWidth) / 2;
+                        }
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            if (links.length && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) setActive(entry.target.id);
+                    });
+                }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+                links.forEach(function (link) {
+                    var section = document.getElementById(link.getAttribute('href').slice(1));
+                    if (section) observer.observe(section);
+                });
+            }
+
+            /* 2. If reagan.jpeg is missing, show a neat "OR" badge instead of a broken image */
+            function useFallback(img) {
+                if (img.dataset.fallbackDone) return;
+                img.dataset.fallbackDone = 'true';
+                var badge = document.createElement('div');
+                badge.className = 'avatar-fallback';
+                badge.setAttribute('role', 'img');
+                badge.setAttribute('aria-label', 'Omondi Reagan');
+                badge.textContent = 'OR';
+                img.replaceWith(badge);
+            }
+
+            Array.prototype.forEach.call(
+                document.querySelectorAll('.profile-mini img, .welcome-image img'),
+                function (img) {
+                    if (img.complete && img.naturalWidth === 0) {
+                        useFallback(img);
+                    } else {
+                        img.addEventListener('error', function () { useFallback(img); });
+                    }
+                }
+            );
+        })();
+    </script>
+
 </body>
 </html>
