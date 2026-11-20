@@ -12,7 +12,8 @@ header {
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
+  margin: 8px;
 }
 
 /* About section */
@@ -49,10 +50,12 @@ header {
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: lightgrey;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
+  margin-left: 8px;
+  margin-rigt: 8px;
 }
 
 /* Skills,Project */
