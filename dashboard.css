@@ -352,6 +352,110 @@ a {
 }
 
 
+/* Mobile top bar, close button and overlay (only shown on small screens) */
+
+.mobile-bar {
+    display: none;
+
+    position: sticky;
+    top: 0;
+    z-index: 90;
+
+    align-items: center;
+    gap: 14px;
+
+    height: 58px;
+    padding: 0 16px;
+
+    background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+    color: #ffffff;
+
+    box-shadow: 0 2px 12px rgba(13, 24, 40, .25);
+}
+
+.mobile-brand {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.mobile-brand span {
+    color: var(--blue-400);
+}
+
+.menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: #ffffff;
+}
+
+.menu-toggle:focus-visible,
+.sidebar-close:focus-visible {
+    outline: 3px solid var(--blue-300);
+    outline-offset: 2px;
+}
+
+.sidebar-close {
+    display: none;
+    place-items: center;
+
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    width: 36px;
+    height: 36px;
+
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.sidebar-overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+    z-index: 250;
+
+    background: rgba(13, 24, 40, .6);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .3s ease;
+}
+
+.sidebar-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 /* =====================================================
    5. MAIN CONTENT & TOP BAR
 ===================================================== */
@@ -894,6 +998,112 @@ a {
 }
 
 
+/* Services: steps and call-to-action buttons */
+
+.service-steps {
+    counter-reset: step;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-top: 14px;
+}
+
+.service-steps li {
+    counter-increment: step;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 18px 20px;
+
+    background: var(--blue-50);
+    border: 1px solid var(--blue-100);
+    border-radius: 12px;
+
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.service-steps li::before {
+    content: counter(step);
+
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    background: var(--blue-600);
+    color: #ffffff;
+
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.service-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding-top: 24px;
+
+    border-top: 1px solid var(--line);
+}
+
+.whatsapp-button,
+.email-button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.whatsapp-button {
+    background: #16a34a;
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, .3);
+}
+
+.whatsapp-button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.email-button {
+    background: var(--surface);
+    color: var(--blue-600);
+    border: 1px solid var(--blue-600);
+}
+
+.email-button:hover {
+    background: var(--blue-50);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+
+    .service-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .service-cta a {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+}
+
+
 /* =====================================================
    11. PROJECTS
 ===================================================== */
@@ -1258,7 +1468,7 @@ a:focus-visible {
 }
 
 
-/* ---------- Tablet: sidebar becomes a sticky top bar ---------- */
+/* ---------- Tablet & phone: sidebar becomes a slide-in menu from the left ---------- */
 
 @media (max-width: 900px) {
 
@@ -1266,73 +1476,47 @@ a:focus-visible {
         display: block;
     }
 
+    /* Top bar with the menu button */
+    .mobile-bar {
+        display: flex;
+    }
+
+    /* The full sidebar, hidden off-screen to the left until opened */
     .sidebar {
-        position: sticky;
-        top: 0;
+        width: min(282px, 86vw);
+        height: 100vh;
+        height: 100dvh;
 
-        width: 100%;
-        height: auto;
+        transform: translateX(-105%);
+        visibility: hidden;
 
-        flex-direction: row;
-        align-items: center;
-        gap: 18px;
+        transition: transform .3s ease, visibility .3s ease;
 
-        padding: 10px 16px;
-
-        overflow: visible;
+        z-index: 300;
     }
 
-    .brand {
-        padding: 0;
+    .sidebar.open {
+        transform: translateX(0);
+        visibility: visible;
+        box-shadow: 0 0 44px rgba(0, 0, 0, .5);
     }
 
-    .brand h2 { font-size: 20px; }
-
-    .brand p,
-    .profile-mini,
-    .nav-heading,
-    .sidebar-bottom {
-        display: none;
+    .sidebar-close {
+        display: grid;
     }
 
-    .navigation {
-        flex: 1;
-        flex-shrink: 1;
-        min-width: 0;
-
-        flex-direction: row;
-        gap: 4px;
-
-        overflow-x: auto;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
+    .sidebar-overlay {
+        display: block;
     }
 
-    .navigation::-webkit-scrollbar { display: none; }
-
-    .navigation a {
-        white-space: nowrap;
-        flex-shrink: 0;
-
-        padding: 9px 13px;
-        font-size: 13px;
-
-        border-left: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    .navigation a:hover { transform: none; }
-
-    .navigation a.active {
-        border-left: none;
-        border-bottom-color: var(--blue-300);
-        box-shadow: none;
+    body.menu-open {
+        overflow: hidden;
     }
 
     .main-content {
         width: 100%;
         margin-left: 0;
-        padding: 26px 22px;
+        padding: 24px 22px;
     }
 
     .section {
@@ -1352,15 +1536,6 @@ a:focus-visible {
 
     body {
         font-size: 14px;
-    }
-
-    .sidebar {
-        padding: 9px 12px;
-        gap: 10px;
-    }
-
-    .navigation a span {
-        display: none;
     }
 
     .main-content {
@@ -1454,11 +1629,6 @@ a:focus-visible {
         text-align: center;
     }
 
-    .navigation a {
-        padding: 9px 10px;
-        font-size: 12px;
-    }
-
 }
 
 
@@ -1474,6 +1644,8 @@ a:focus-visible {
     }
 
     .sidebar,
+    .mobile-bar,
+    .sidebar-overlay,
     .topbar-actions,
     .welcome-actions,
     .skip-link,
