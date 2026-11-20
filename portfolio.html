@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#142338">
+
+    <title>Omondi Reagan | Original Portfolio</title>
+    <meta name="description" content="Personal portfolio of Omondi Reagan, showcasing engineering skills, technology interests and projects.">
+    <meta name="author" content="Omondi Reagan">
+
+    <!-- Social sharing preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Omondi Reagan | Original Portfolio">
+    <meta property="og:description" content="Engineering skills, technology interests and projects of Omondi Reagan.">
+    <meta property="og:image" content="reagan.jpeg">
+
+    <!-- Browser tab icon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142338'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3ER%3C/text%3E%3C/svg%3E">
+
+    <!-- File name is case-sensitive on most web hosts: keep it lowercase -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body id="top">
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <p class="eyebrow">ORIGINAL PORTFOLIO</p>
+
+        <h1>Omondi Reagan</h1>
+
+        <p>
+            Aspiring Web Developer | Plant and Service Engineering Student
+        </p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main id="main">
+
+
+        <!-- TOP NAVIGATION -->
+        <div class="portfolio-navigation top-navigation">
+
+            <a href="index.html" class="dashboard-button">
+                ← Back to Dashboard
+            </a>
+
+        </div>
+
+
+        <!-- ABOUT ME -->
+        <section class="about" aria-labelledby="about-title">
+
+            <h2 id="about-title">About Me</h2>
+
+            <img src="reagan.jpeg" alt="Portrait of Omondi Reagan" decoding="async">
+
+            <p>
+                Hello! I'm Omondi Reagan. I have a background in
+                engineering and an interest in web development.
+                I enjoy exploring engineering, technology and
+                building useful solutions.
+            </p>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section class="skills" aria-labelledby="skills-title">
+
+            <h2 id="skills-title">My Skills</h2>
+
+            <div class="skill-group">
+
+                <h3>Digital and Technical</h3>
+
+                <ul>
+                    <li>HTML and CSS</li>
+                    <li>JavaScript Fundamentals</li>
+                    <li>Python Fundamentals and Automation</li>
+                    <li>Microsoft Excel for Engineering Applications</li>
+                </ul>
+
+            </div>
+
+            <div class="skill-group">
+
+                <h3>Engineering</h3>
+
+                <ul>
+                    <li>Plant Maintenance</li>
+                    <li>Mechanical Pumps and Compressors</li>
+                    <li>Hydraulic and Pneumatic Systems</li>
+                    <li>Plant Machinery Operation and Maintenance</li>
+                    <li>Refrigeration and Air Conditioning Systems (RAC)</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="projects" aria-labelledby="projects-title">
+
+            <h2 id="projects-title">My Projects</h2>
+
+            <ul>
+                <li>Personal Portfolio Website (HTML and CSS)</li>
+                <li>Maintenance Schedule Tool in Excel</li>
+                <li>Simple Calculator in Python</li>
+                <li>Survey Drawing Project using AutoCAD</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact" aria-labelledby="contact-title">
+
+            <h2 id="contact-title">Contact Me</h2>
+
+            <ul>
+
+                <li>
+                    <span class="label">Email:</span>
+                    <a href="mailto:omoshreagan750@gmail.com">omoshreagan750@gmail.com</a>
+                </li>
+
+                <li>
+                    <span class="label">Phone:</span>
+                    <a href="tel:+254715097757">+254 715 097 757</a>
+                </li>
+
+                <li>
+                    <span class="label">WhatsApp:</span>
+                    <a href="https://wa.me/254715097757" target="_blank" rel="noopener noreferrer">Chat with me</a>
+                </li>
+
+                <li>
+                    <span class="label">Location:</span>
+                    Kenya
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- BOTTOM NAVIGATION -->
+        <div class="portfolio-navigation bottom-navigation">
+
+            <a href="#top" class="top-button">
+                ↑ Back to Top
+            </a>
+
+            <a href="index.html" class="dashboard-button">
+                ← Back to Dashboard
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Omondi Reagan. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+        /* If reagan.jpeg is missing, show a neat "OR" badge instead of a broken image */
+        (function () {
+            'use strict';
+
+            function useFallback(img) {
+                if (img.dataset.fallbackDone) return;
+                img.dataset.fallbackDone = 'true';
+                var badge = document.createElement('div');
+                badge.className = 'avatar-fallback';
+                badge.setAttribute('role', 'img');
+                badge.setAttribute('aria-label', 'Omondi Reagan');
+                badge.textContent = 'OR';
+                img.replaceWith(badge);
+            }
+
+            var img = document.querySelector('.about img');
+            if (!img) return;
+
+            if (img.complete && img.naturalWidth === 0) {
+                useFallback(img);
+            } else {
+                img.addEventListener('error', function () { useFallback(img); });
+            }
+        })();
+    </script>
+
+</body>
+</html>
