@@ -13,7 +13,7 @@ header {
   color: white;
   text-align: center;
   padding: 20px;
-  margin: 4px;
+  margin: 2px;
   border-radius: 10px;
 }
 
@@ -55,7 +55,9 @@ footer {
   color: white;
   text-align: center;
   padding: 8px;
-  margin: 8ppx;
+  margin-top: 8ppx;
+  margin-left: 8ppx;
+  margin-right: 8ppx;
   border-radius: 10px;
 }
 
