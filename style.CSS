@@ -83,3 +83,13 @@ footer {
   color: #007bff;
   margin-bottom: 15px;
 }
+
+.contact a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #005599;
+    text-decoration: underline;
+}
