@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#142338">
 
     <title>Omondi Reagan | Professional Dashboard</title>
-    <meta name="description" content="Professional dashboard and portfolio of Omondi Reagan, Plant and Service Engineering student, aspiring developer and entrepreneur.">
+    <meta name="description" content="Professional dashboard and portfolio of Omondi Reagan: engineering student, aspiring developer and entrepreneur who helps small businesses register, receive payments and go online.">
     <meta name="author" content="Omondi Reagan">
 
     <!-- Social sharing preview -->
@@ -27,10 +27,22 @@
 
     <a href="#main" class="skip-link">Skip to main content</a>
 
+    <!-- Phone / tablet: top bar with menu button -->
+    <div class="mobile-bar">
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+            <span></span><span></span><span></span>
+        </button>
+        <span class="mobile-brand">REAGAN<span>.</span></span>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+
     <div class="dashboard">
 
         <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
+
+            <button class="sidebar-close" type="button" aria-label="Close menu">&times;</button>
 
             <div class="brand">
                 <h2>REAGAN<span>.</span></h2>
@@ -51,7 +63,7 @@
                 <a href="#overview" class="active" aria-current="true"><span aria-hidden="true">⌂</span> Overview</a>
                 <a href="#profile"><span aria-hidden="true">◉</span> My Profile</a>
                 <a href="#skills"><span aria-hidden="true">▤</span> Technical Skills</a>
-                <a href="#business"><span aria-hidden="true">▣</span> Business Experience</a>
+                <a href="#business"><span aria-hidden="true">▣</span> Services</a>
                 <a href="#projects"><span aria-hidden="true">▧</span> My Projects</a>
                 <a href="#experience"><span aria-hidden="true">⚙</span> Work Experience</a>
                 <a href="#education"><span aria-hidden="true">▥</span> Education</a>
@@ -103,27 +115,28 @@
                         <p>
                             Plant and Service Engineering student, aspiring web developer
                             and entrepreneur passionate about engineering, technology
-                            and creating useful solutions.
+                            and creating useful solutions. I also help individuals and small
+                            businesses get registered, receive payments and go online.
                         </p>
 
                         <div class="welcome-actions">
-                            <a href="#profile" class="primary-button">Explore My Profile</a>
+                            <a href="#business" class="primary-button">Work With Me</a>
                             <a href="#projects" class="secondary-button">View My Projects</a>
                             <a href="portfolio.html" class="portfolio-button">Original Portfolio →</a>
                         </div>
 
                         <div class="hero-stats">
                             <div>
-                                <strong>Level 5</strong>
-                                <span>Plant &amp; Service Engineering</span>
+                                <strong>Registration</strong>
+                                <span>BRS and eCitizen</span>
                             </div>
                             <div>
-                                <strong>5</strong>
-                                <span>Projects &amp; ideas</span>
+                                <strong>Payments</strong>
+                                <span>Till and M-Pesa</span>
                             </div>
                             <div>
-                                <strong>2</strong>
-                                <span>Qualifications</span>
+                                <strong>Websites</strong>
+                                <span>Built for your business</span>
                             </div>
                         </div>
 
@@ -149,7 +162,7 @@
                     <div class="overview-card">
                         <div class="card-icon" aria-hidden="true">⚙</div>
                         <h3>Engineering</h3>
-                        <p>Plant and Service Engineering Level 5</p>
+                        <p>Plant and Service Engineering</p>
                     </div>
 
                     <div class="overview-card">
@@ -161,7 +174,7 @@
                     <div class="overview-card">
                         <div class="card-icon" aria-hidden="true">▣</div>
                         <h3>Entrepreneurship</h3>
-                        <p>REAGOM ENTERPRISES</p>
+                        <p>REAGOM ENTERPRISES: business setup and digital solutions</p>
                     </div>
 
                     <div class="overview-card">
@@ -214,8 +227,8 @@
                             <strong>Engineering and Technology</strong>
                         </div>
                         <div>
-                            <span>Business</span>
-                            <strong>REAGOM ENTERPRISES</strong>
+                            <span>Services</span>
+                            <strong>Business setup and websites</strong>
                         </div>
                     </div>
 
@@ -261,47 +274,63 @@
             </section>
 
 
-            <!-- BUSINESS EXPERIENCE -->
+            <!-- SERVICES / WORK WITH ME -->
             <section id="business" class="section" aria-labelledby="business-title">
 
                 <div class="section-title">
                     <div>
-                        <p class="eyebrow">ENTREPRENEURSHIP</p>
-                        <h2 id="business-title">Business Skills and Experience</h2>
+                        <p class="eyebrow">WORK WITH ME</p>
+                        <h2 id="business-title">Business Setup and Digital Solutions</h2>
                     </div>
                 </div>
 
                 <div class="content-card">
 
-                    <h3>REAGOM ENTERPRISES</h3>
+                    <h3>Let's Get Your Business Started</h3>
 
                     <p>
-                        Developing business management and digital entrepreneurship
-                        experience through my business activities and projects.
+                        Starting a business can feel confusing. Through REAGOM ENTERPRISES
+                        I help individuals and small businesses get registered, set up to
+                        receive payments and start building their presence online.
                     </p>
 
                     <div class="business-grid">
 
                         <div class="business-item">
-                            <h4>Business Registration</h4>
-                            <p>Practical experience with business name registration through BRS and eCitizen.</p>
+                            <h4>Business Name Registration</h4>
+                            <p>Support registering your business name through BRS on eCitizen.</p>
                         </div>
 
                         <div class="business-item">
-                            <h4>Business Payments</h4>
-                            <p>Experience with the Safaricom Business Till application process.</p>
+                            <h4>Business Till Setup</h4>
+                            <p>Help with the Safaricom Business Till application process so you can receive payments.</p>
                         </div>
 
                         <div class="business-item">
-                            <h4>Daraja API</h4>
-                            <p>Experience with production setup and M-Pesa integration.</p>
+                            <h4>M-Pesa Integration</h4>
+                            <p>Daraja API and STK Push integration so customers can pay directly from your website or app.</p>
                         </div>
 
                         <div class="business-item">
-                            <h4>Digital Business</h4>
-                            <p>Developing ideas involving digital payments, networking and automation.</p>
+                            <h4>Websites and Digital Tools</h4>
+                            <p>Clean, mobile-friendly websites and simple online tools built around your business.</p>
                         </div>
 
+                    </div>
+
+                    <h3>How It Works</h3>
+
+                    <ol class="service-steps">
+                        <li>Tell me about your business idea.</li>
+                        <li>I guide you through registration and payments setup.</li>
+                        <li>We build the tools you need to go online.</li>
+                    </ol>
+
+                    <div class="service-cta">
+                        <a href="https://wa.me/254715097757?text=Hello%20Reagan%2C%20I%20would%20like%20help%20with%20registering%20and%20setting%20up%20my%20business."
+                           class="whatsapp-button" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                        <a href="mailto:omoshreagan750@gmail.com?subject=Business%20setup%20enquiry"
+                           class="email-button">Send an Email</a>
                     </div>
 
                 </div>
@@ -433,12 +462,12 @@
 
                     <div class="education-item">
                         <h3>Eldoret National Polytechnic</h3>
-                        <p>Plant and Service Engineering – Level 5</p>
+                        <p>Plant and Service Engineering</p>
                         <span class="education-status">Final assignments remaining</span>
                     </div>
 
                     <div class="education-item">
-                        <h3>Shiners Group of Schools</h3>
+                        <h3>Shiners Group of Schools – Thika</h3>
                         <p>Kenya Certificate of Secondary Education (KCSE)</p>
                     </div>
 
@@ -493,8 +522,9 @@
                     <h3>Let's Connect</h3>
 
                     <p>
-                        Feel free to contact me for professional, engineering,
-                        technology or business-related opportunities.
+                        Feel free to contact me about business registration, payments
+                        setup, websites, or any professional, engineering or
+                        technology opportunity.
                     </p>
 
                     <div class="contact-list">
@@ -550,6 +580,43 @@
         (function () {
             'use strict';
 
+            /* 0. Slide-in sidebar menu on phones and tablets */
+            var sidebar  = document.getElementById('sidebar');
+            var toggle   = document.querySelector('.menu-toggle');
+            var overlay  = document.querySelector('.sidebar-overlay');
+            var closeBtn = document.querySelector('.sidebar-close');
+
+            function setMenu(open) {
+                sidebar.classList.toggle('open', open);
+                overlay.classList.toggle('show', open);
+                document.body.classList.toggle('menu-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+                if (open) closeBtn.focus();
+            }
+
+            toggle.addEventListener('click', function () {
+                setMenu(!sidebar.classList.contains('open'));
+            });
+            overlay.addEventListener('click', function () { setMenu(false); });
+            closeBtn.addEventListener('click', function () { setMenu(false); toggle.focus(); });
+
+            Array.prototype.forEach.call(
+                document.querySelectorAll('.sidebar a'),
+                function (a) { a.addEventListener('click', function () { setMenu(false); }); }
+            );
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+                    setMenu(false);
+                    toggle.focus();
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 900 && sidebar.classList.contains('open')) setMenu(false);
+            });
+
             /* 1. Highlight the sidebar link of the section currently in view */
             var links = Array.prototype.slice.call(
                 document.querySelectorAll('.navigation a[href^="#"]')
@@ -561,11 +628,6 @@
                     link.classList.toggle('active', match);
                     if (match) {
                         link.setAttribute('aria-current', 'true');
-                        /* keep the active link visible in the scrolling mobile menu */
-                        if (link.scrollIntoView && link.parentElement.scrollWidth > link.parentElement.clientWidth) {
-                            var nav = link.parentElement;
-                            nav.scrollLeft = link.offsetLeft - (nav.clientWidth - link.clientWidth) / 2;
-                        }
                     } else {
                         link.removeAttribute('aria-current');
                     }
